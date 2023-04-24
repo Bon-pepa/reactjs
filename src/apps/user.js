@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 export function User(props) {
     let salaries = props.user.salaries.map((salary, index) => {
@@ -24,5 +24,4 @@ export function User(props) {
             </table>
         </div>
     </>;
-}
-//pulpul
+};
