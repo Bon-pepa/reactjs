@@ -2,6 +2,7 @@
 import './App.css';
 import { Calculator } from './apps/calculator';
 import { User } from './apps/user';
+import Salaries from './apps/salaries';
 
 function hello(user) {
   if (user) {
@@ -45,9 +46,9 @@ function App() {
   // const c = <span>Hello</span>;
   // const name = hello();
 
-  // let salaries = user.salaries.map((salary, index) => {
-  //   return <tr><td>{index + 1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
-  // });
+  const salaries = user.salaries.map((salary, index) => {
+    return <tr key={index}><td>{index + 1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
+  });
   
 
   return (
@@ -63,6 +64,8 @@ function App() {
       {/* {<Calculator/>} */}
       {/* {<Calculator/>} */}
       {/* {<Calculator/>} */}
+
+      <Salaries items={salaries}/>
 
       {/* <table>
         <thead>
